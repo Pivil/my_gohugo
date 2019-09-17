@@ -1,0 +1,30 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<body>
+	{{ range first 10 (where .Site.RegularPages "Section" "events") }}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-9">
+				{{ if eq .Draft true}}
+					<p> {{ .Title }}</p>
+				{{ else }}
+					<a href="{{ .Permalink }}">{{ .Title }}</a>
+				{{ end }}
+				
+				<p>Label : {{ .Params.label }}</p>
+				<p>When : {{ .Params.when }}</p>
+			</div>
+			<div class="col-lg-3">
+				<img class="img-thumbnail"
+					src="https://intra-science.anaisequey.com/images/stories/observations/bio-polaire%20(18).jpg" />
+			</div>
+		</div>
+		<hr />
+	</div>
+
+	{{ end }}
+
+</body>
+
+{{ partial "footer.html" . }}

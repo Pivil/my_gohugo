@@ -1,0 +1,6 @@
+<h2>Town Hall</h2>
+
+{{ range where .Site.RegularPages "Section" "presentation" }}
+    <img class="img-thumbnail col-lg-8" src="{{ .Params.photo }}" />
+    <p>{{ .Content }}</p>
+{{ end }}
