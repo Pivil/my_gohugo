@@ -1,7 +1,7 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
-zerzerzrerjzkerjzkejrzlkrjzlkejr
 <body>
+
 	{{ range first 10 (where .Site.RegularPages "Section" "events") }}
 	{{if eq .Params.important true}}
 	<div class="container-fluid">
