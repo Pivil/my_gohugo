@@ -1,14 +1,14 @@
 ---
-title: "Event1"
+title: "Concert OLALA"
 address: ""
 postalCode: "75000"
 city: "Paris"
 label: "a"
 when: 14/09/2019
 description: ""
-photos: "https://intra-science.anaisequey.com/images/stories/observations/bio-polaire%20(18).jpg"
+photos: "https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/8/2018/01/15155312/iStock-667709450.jpg"
 draft: false
 important: true
-association: ""
+association: "Asso1"
 
 ---

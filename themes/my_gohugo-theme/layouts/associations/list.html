@@ -5,7 +5,7 @@
 <ul class="list-inline" id="contact-list">
     {{range where .Site.RegularPages "Section" "associations"}}
     <li class="list-inline-item col-md-3">
-        <img class="img-thumbnail" src="{{ .Params.photo }}" />
+        <a href="{{ .Permalink }}"><img class="img-thumbnail" src="{{ .Params.photo }}" /></a>
         <div class="col-xs-12 col-sm-9">
             <span class="name">{{ .Params.title }}</span><br />
             <span class="name">{{ .Params.domain }}</span><br />

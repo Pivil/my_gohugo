@@ -2,8 +2,15 @@
 {{ partial "header.html" . }}
 
 <body>
+	{{ $asso := .Params.title}}
 	<h1>{{ .Title }}</h1>
-	{{.Content}}
+	{{ .Content }}
+	{{ range where .Site.RegularPages "Section" "events" }}
+	{{ if eq .Params.association $asso}}	
+		{{.Params.title}}
+	{{end}}
+	{{end}}
+
 </body>
 
 {{ partial "footer.html" . }}

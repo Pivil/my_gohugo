@@ -2,20 +2,20 @@
 {{ partial "header.html" . }}
 {{ partial "presentation.html" . }}
 
-<h2>Membre of the Council</h2>
+<h2 class="text-center">Membre of the Council</h2>
 <ul class="list-inline" id="contact-list">
 
-{{range where .Site.RegularPages "Section" "conseil-municipal"}}
+    {{range where .Site.RegularPages "Section" "conseil-municipal"}}
     <li class="list-inline-item col-md-3">
-        <img class="img-thumbnail"
-            src="{{ .Params.photo }}" />
+        <img class="img-thumbnail" src="{{ .Params.photo }}" />
         <div class="col-xs-12 col-sm-9">
-            <span class="name">{{.Params.lastName}} - {{.Params.firstName}}</span><br />
-            <span class="visible-xs"> <span class="text-muted">{{ .Params.role }}</span><br /></span>            
+            <p style="text-transform: uppercase;">{{.Params.lastName}}</p>
+            <p style ="text-transform: capitalize;">{{.Params.firstName}}</p>
+            <span class="visible-xs"> <span class="text-muted">{{ .Params.role }}</span><br /></span>
         </div>
         <div class="clearfix"></div>
     </li>
-{{ end }}
+    {{ end }}
 
 </ul>
 {{ partial "footer.html" . }}
