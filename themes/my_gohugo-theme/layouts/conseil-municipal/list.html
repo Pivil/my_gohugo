@@ -7,7 +7,7 @@
 
     {{range where .Site.RegularPages "Section" "conseil-municipal"}}
     <li class="list-inline-item col-md-3">
-        <img class="img-thumbnail" src="{{ .Params.photo }}" />
+        <a href="{{ .Permalink }}"><img class="img-thumbnail" src="{{ .Params.photo }}" /></a>
         <div class="col-xs-12 col-sm-9">
             <p style="text-transform: uppercase;">{{.Params.lastName}}</p>
             <p style ="text-transform: capitalize;">{{.Params.firstName}}</p>
