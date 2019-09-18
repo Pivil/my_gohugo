@@ -12,9 +12,10 @@
 						<div class="carousel-item active">
 							<img class="img-fluid" src="/img/events2.jpeg" style="width:640px;height:360px">
 						</div>
-
-						{{ range first 10 (where .Site.RegularPages "Section" "events") }}
-						{{if eq .Params.important true}}
+						{{ $i := 0}}
+						{{ range where .Site.RegularPages "Section" "events" }}
+						{{ if eq .Params.important true }}
+						{{ if lt $i 10 }}
 						<div class="carousel-item">
 							<a href="{{ .Permalink }}">
 								<img class="img-fluid" src="{{.Params.photos}}" alt="{{.Params.title}}"
@@ -25,6 +26,8 @@
 								<p class="event_info">{{.Params.when}}</p>
 							</div>
 						</div>
+						{{ $i = add $i 1}}
+						{{ end }}
 						{{ end }}
 						{{ end }}
 					</div>

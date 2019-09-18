@@ -1,30 +1,12 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
+{{ partial "single.html" (dict "title" .Params.title "photo" .Params.photo "domain" .Params.domain "address" .Params.address "description" .Params.description)}}
+
 
 <body>
+	<hr/>
 	{{ $asso := .Params.title}}
-	<h2 class="text-center">{{ .Title }}</h2>
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-3">
-				<img class="img-thumbnail" src="{{ .Params.photo }}">
-			</div>
-		</div>
-
-		<div class="row justify-content-center">
-			<p>{{ .Params.domain }}</p>
-		</div>
-
-		<div class="row justify-content-center">
-			<p>{{ .Params.address }}</p>
-		</div>
-
-		<div class="row justify-content-center">
-			<p>{{ .Params.description }}</p>
-		</div>
-	</div>
-	<hr />
-
+	
 	<div class="container">
 		<h2 class="text-center">Events related to</h2>
 

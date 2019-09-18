@@ -1,41 +1,40 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 {{ partial "presentation.html" . }}
-<p class="important"> coucou <p>
 <h2 class="text-center">Membre of the Council</h2>
-<div class="tree">
-    <ul>
-        <li><a href="#">Grand Child</a></li>
-        <li>
-            <a href="#">Grand Child</a>
-            <ul>
-                <li>
-                    <a href="#">Great Grand Child</a>
-                </li>
-                <li>
-                    <a href="#">Great Grand Child</a>
-                </li>
-                <li>
-                    <a href="#">Great Grand Child</a>
-                </li>
-            </ul>
-        </li>
-        <li><a href="#">Grand Child</a></li>
-    </ul>
+<h3 class="text-center">Mayor</h3>
+{{ range where .Site.RegularPages "Section" "conseil-municipal" }}
+{{ if eq .Params.role "Mayor" }}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-3">
+            <img class="img-thumbnail" src="{{ .Params.photo }}">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <p>{{ upper .Params.lastName }}</p>
+    </div>
+    <div class="row justify-content-center">
+        <p>{{ humanize .Params.firstName }}</p>
+    </div>
 </div>
+{{ end }}
+{{ end }}
 
-<ul class="list-inline" id="contact-list">
+<h3 class="text-center">Deputies</h3>
 
+<ul class="list-inline">
     {{range where .Site.RegularPages "Section" "conseil-municipal"}}
+    {{ if eq .Params.role "Deputy"}}
     <li class="list-inline-item col-md-3">
         <a href="{{ .Permalink }}"><img class="img-thumbnail" src="{{ .Params.photo }}" /></a>
         <div class="col-xs-12 col-sm-9">
-            <p style="text-transform: uppercase;">{{.Params.lastName}}</p>
-            <p style="text-transform: capitalize;">{{.Params.firstName}}</p>
-            <span class="visible-xs"> <span class="text-muted">{{ .Params.role }}</span><br /></span>
+            {{upper .Params.lastName}}
+            {{humanize .Params.firstName}}
         </div>
         <div class="clearfix"></div>
     </li>
+    {{ end }}
     {{ end }}
 
 </ul>
