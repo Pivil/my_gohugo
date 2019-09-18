@@ -1,19 +1,23 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-<h2>Associations</h2>
-<ul class="list-inline" id="contact-list">
-    {{range where .Site.RegularPages "Section" "associations"}}
-    <li class="list-inline-item col-md-3">
-        <a href="{{ .Permalink }}"><img class="img-thumbnail" src="{{ .Params.photo }}" /></a>
-        <div class="col-xs-12 col-sm-9">
-            <span class="name">{{ .Params.title }}</span><br />
-            <span class="name">{{ .Params.domain }}</span><br />
-            <span class="visible-xs"> <span class="text-muted">{{ .Params.address }}</span><br /></span>
-        </div>
-        <div class="clearfix"></div>
-    </li>
-    {{ end }}
+<h2 class="text-center">Associations</h2>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <ul class="list-inline">
+            {{range where .Site.RegularPages "Section" "associations"}}
+            <li class="list-inline-item col-md-3">
+                <a href="{{ .Permalink }}"><img class="img-thumbnail img-fluid" src="{{ .Params.photo }}" /></a>
+                <div class="col-xs-12 col-sm-9">
+                    <span class="name">{{ .Params.title }}</span><br />
+                    <span class="name">{{ .Params.domain }}</span><br />
+                    <span class="visible-xs"> <span class="text-muted">{{ .Params.address }}</span><br /></span>
+                </div>
+                <div class="clearfix"></div>
+            </li>
+            {{ end }}
 
-</ul>
+        </ul>
+    </div>
+</div>
 {{ partial "footer.html" . }}

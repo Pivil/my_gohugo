@@ -3,13 +3,39 @@
 
 <body>
 	{{ $asso := .Params.title}}
-	<h1>{{ .Title }}</h1>
+	<h2 class="text-center">{{ .Title }}</h2>
+	<div class="container">
+		<div class="row justify-content-center">
+			<img src="{{ .Params.photo }}">
+		</div>
+
+		<div class="row justify-content-center">
+			<p>{{ .Params.domain }}</p>
+		</div>
+
+		<div class="row justify-content-center">
+			<p>{{ .Params.address }}</p>
+		</div>
+
+		<div class="row justify-content-center">
+			<p>{{ .Params.description }}</p>
+		</div>
+	</div>
 	{{ .Content }}
-	{{ range where .Site.RegularPages "Section" "events" }}
-	{{ if eq .Params.association $asso}}	
-		{{.Params.title}}
-	{{end}}
-	{{end}}
+	<hr />
+
+	<div class="container">
+		<h2 class="text-center">Events related to</h2>
+
+		{{ range where .Site.RegularPages "Section" "events" }}
+		{{ if eq .Params.association $asso}}
+		<div class="row justify-content-center">
+			<a href="{{ .Permalink}}">{{.Params.title}}</a>
+		</div>
+		{{end}}
+		{{end}}
+	</div>
+
 
 </body>
 

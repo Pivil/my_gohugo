@@ -1,6 +1,6 @@
 ---
 title: "Concert OLALA"
-address: ""
+address: "34 rue machin"
 postalCode: "75000"
 city: "Paris"
 label: "a"

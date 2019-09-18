@@ -1,6 +1,6 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
-
+<!-- groupByDate -->
 <body>
 	{{ range first 10 (where .Site.RegularPages "Section" "events") }}
 	<div class="container-fluid">

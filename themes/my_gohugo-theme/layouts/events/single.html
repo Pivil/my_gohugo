@@ -2,8 +2,33 @@
 {{ partial "header.html" . }}
 
 <body>
-	<h1>{{ .Title }}</h1>
-	{{.Content}}
+	<h2 class="text-center">{{ .Title }}</h2>
+	<div class="container">
+		<div class="row justify-content-center">
+			<img src="{{ .Params.photos }}">
+		</div>
+
+		<div class="row justify-content-center">
+			<p>{{ .Params.address }} - {{ .Params.postalCode }}, {{ .Params.city }}</p>
+		</div>
+
+		<div class="row justify-content-center">
+			<p>{{ .Params.when }}</p>
+		</div>
+
+		<div class="row justify-content-center">
+			<p>{{ .Params.description }}</p>
+		</div>
+
+		<div class="row justify-content-center">
+			{{ $associationName := .Params.association}}
+			{{ range (where .Site.RegularPages "Section" "associations") }}
+			{{if eq .Params.title $associationName}}
+			<a href="{{ .Permalink}}">{{.Params.title}}</a>
+			{{ end }}
+			{{ end }}
+		</div>
+	</div>
 </body>
 
 {{ partial "footer.html" . }}
