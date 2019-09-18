@@ -6,7 +6,7 @@ city: "Paris"
 label: "b"
 when: 15/09/2019
 description: ""
-photos:
+photos: "https://intra-science.anaisequey.com/images/stories/observations/bio-polaire%20(18).jpg"
 draft: true
 important: true
 association: ""
