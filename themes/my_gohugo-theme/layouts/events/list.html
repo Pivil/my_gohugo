@@ -1,28 +1,27 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 <!-- groupByDate -->
+
 <body>
-	{{ range first 10 (where .Site.RegularPages "Section" "events") }}
+	{{ range first 10 ((where .Data.Pages "Section" "events").ByParam "when").Reverse }}
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-9">
 				{{ if eq .Draft true}}
-					<p> {{ .Title }}</p>
+				<p> {{ .Title }}</p>
 				{{ else }}
-					<a href="{{ .Permalink }}">{{ .Title }}</a>
+				<a href="{{ .Permalink }}">{{ .Title }}</a>
 				{{ end }}
-				
+
 				<p>Label : {{ .Params.label }}</p>
 				<p>When : {{ .Params.when }}</p>
 			</div>
 			<div class="col-lg-3">
-				<img class="img-thumbnail"
-					src="{{ .Params.photos }}" />
+				<img class="img-thumbnail" src="{{ .Params.photos }}" />
 			</div>
 		</div>
 		<hr />
 	</div>
-
 	{{ end }}
 
 </body>

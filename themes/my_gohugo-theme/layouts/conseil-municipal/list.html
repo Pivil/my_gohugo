@@ -1,8 +1,29 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 {{ partial "presentation.html" . }}
-
+<p class="important"> coucou <p>
 <h2 class="text-center">Membre of the Council</h2>
+<div class="tree">
+    <ul>
+        <li><a href="#">Grand Child</a></li>
+        <li>
+            <a href="#">Grand Child</a>
+            <ul>
+                <li>
+                    <a href="#">Great Grand Child</a>
+                </li>
+                <li>
+                    <a href="#">Great Grand Child</a>
+                </li>
+                <li>
+                    <a href="#">Great Grand Child</a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Grand Child</a></li>
+    </ul>
+</div>
+
 <ul class="list-inline" id="contact-list">
 
     {{range where .Site.RegularPages "Section" "conseil-municipal"}}
@@ -10,7 +31,7 @@
         <a href="{{ .Permalink }}"><img class="img-thumbnail" src="{{ .Params.photo }}" /></a>
         <div class="col-xs-12 col-sm-9">
             <p style="text-transform: uppercase;">{{.Params.lastName}}</p>
-            <p style ="text-transform: capitalize;">{{.Params.firstName}}</p>
+            <p style="text-transform: capitalize;">{{.Params.firstName}}</p>
             <span class="visible-xs"> <span class="text-muted">{{ .Params.role }}</span><br /></span>
         </div>
         <div class="clearfix"></div>

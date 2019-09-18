@@ -10,5 +10,6 @@ photos: "http://www.federation-peche-yonne.fr/galerie/0d0f10b665a4.jpg"
 draft: true
 important: true
 association: ""
+test: "0"
 
 ---
