@@ -1,9 +1,11 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
-<!-- groupByDate -->
 
 <body>
-	{{ range (where .Data.Pages "Section" "archived_events").ByParam "when" }}
+	<h2 class="text-center">Archived Events</h2>
+
+	{{ range ((where .Site.RegularPages "Section" "events").ByParam "when").Reverse }}
+	{{ if eq .Params.archived true}}
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-9">
@@ -22,6 +24,7 @@
 		</div>
 		<hr />
 	</div>
+	{{ end }}
 	{{ end }}
 
 </body>

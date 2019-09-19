@@ -1,10 +1,9 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 <body>
-	<h2 class="text-center">Upcoming Events</h3>
+	<h2 class="text-center">All Events</h3>
 
 	{{ range ((where .Site.RegularPages "Section" "events").ByParam "when").Reverse }}
-	{{ if eq .Params.archived false}}
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-9">
@@ -23,7 +22,6 @@
 		</div>
 		<hr />
 	</div>
-	{{ end }}
 	{{ end }}
 
 </body>

@@ -11,4 +11,5 @@ draft: false
 important: true
 association: "Asso1"
 test: "3"
+archived: true
 ---

@@ -10,4 +10,5 @@ photos:
 draft: true
 important: false
 association: ""
+archived: false
 ---
