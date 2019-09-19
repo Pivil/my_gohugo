@@ -1,0 +1,19 @@
+body {
+    height : 1000px;
+    margin: 2%;
+}
+
+.event_info {
+    background-color: rgba(255, 255, 255, 0.74);
+    border-radius: 30px;
+    color:black;
+}
+
+.row .carousel {
+    align-content: center;
+}
+
+.text-center {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
