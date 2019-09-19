@@ -1,5 +1,5 @@
 ---
-title: Asso 2
+title: Asso2
 domain: Domain2
 address: Addr2
 description: Desc2

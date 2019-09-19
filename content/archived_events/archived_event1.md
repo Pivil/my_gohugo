@@ -1,13 +1,15 @@
 ---
-title: "Archived_event1"
-address: ""
+title: "Archived 1"
+address: "34 rue machin"
 postalCode: "75000"
 city: "Paris"
-label: ""
-when: 2019-09-18T16:10:54+02:00
+label: "a"
+when: 20/09/2019
 description: ""
-photos:
-draft: true
-important: false
-association: ""
+photos: "https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/8/2018/01/15155312/iStock-667709450.jpg"
+draft: false
+important: true
+association: "Asso1"
+test: "3"
+
 ---

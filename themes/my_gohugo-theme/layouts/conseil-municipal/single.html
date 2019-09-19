@@ -1,32 +1,9 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-<body>
-	<h2 class="text-center">Member of the Council</h2>
-	<h2 class="text-center">{{ .Title }}</h2>
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-3">
-				<img class="img-thumbnail" src="{{ .Params.photo }}">
-			</div>
-		</div>
-	</div>
+{{ $name := delimit (slice (upper .Params.lastName) (humanize .Params.firstName)) " - "}}
+{{ partial "single.html" (dict "title" $name "photo" .Params.photo "var1" .Params.role "var2" .Content)}}
 
-	<div class="row justify-content-center">
-		<p style="text-transform: uppercase">{{ .Params.lastName }}</p>
-	</div>
-
-	<div class="row justify-content-center">
-		<p style="text-transform: capitalize">{{ .Params.firstName }}</p>
-	</div>
-
-	<div class="row justify-content-center">
-		<p>{{ .Params.role }}</p>
-	</div>
-
-	<div class="row justify-content-center">
-		{{ .Content }}
-	</div>
 	</div>
 </body>
 

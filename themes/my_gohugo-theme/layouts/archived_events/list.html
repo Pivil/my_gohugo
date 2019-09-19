@@ -3,7 +3,7 @@
 <!-- groupByDate -->
 
 <body>
-	{{ range first 10 ((where .Data.Pages "Section" "events").ByParam "when").Reverse }}
+	{{ range (where .Data.Pages "Section" "archived_events").ByParam "when" }}
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-9">

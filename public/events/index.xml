@@ -11,11 +11,20 @@
     
     
     <item>
-      <title>Event1</title>
+      <title>Concert OLALA</title>
       <link>http://example.org/events/event1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://example.org/events/event1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pêche ogros</title>
+      <link>http://example.org/events/event2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/events/event2/</guid>
       <description></description>
     </item>
     
