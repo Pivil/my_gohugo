@@ -1,0 +1,8 @@
+<h2 class="text-center">Town Hall</h2>
+
+{{ range where .Site.RegularPages "Section" "presentation" }}
+<div class="row d-flex justify-content-center">
+        <img class="img-thumbnail col-lg-8" src="{{ .Params.photo }}" />
+</div>
+    <div class="presentation">{{ .Content }}</div>
+{{ end }}
