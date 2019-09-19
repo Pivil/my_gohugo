@@ -1,7 +1,7 @@
 {{ partial "head.html" . }}
-{{ partial "header.html" . }}
 
 <body>
+	{{ partial "header.html" . }}
 	<h2 class="text-center">CHECK THIS OUT</h2>
 	<div class="container">
 		<div class="row d-flex justify-content-center">
@@ -13,7 +13,7 @@
 						</div>
 						{{ $i := 0}}
 						{{ range where .Site.RegularPages "Section" "events" }}
-						{{ if eq .Params.important true }}
+						{{ if and (eq .Params.important true) (eq .Params.archived false) }}
 						{{ if lt $i 10 }}
 						<div class="carousel-item">
 							<a href="{{ .Permalink }}">
@@ -42,12 +42,11 @@
 
 			</div>
 
-		
-		
-		
+
+
+
 		</div>
 
 	</div>
+	{{ partial "footer.html" . }}
 </body>
-
-{{ partial "footer.html" . }}

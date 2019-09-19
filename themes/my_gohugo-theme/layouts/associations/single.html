@@ -5,22 +5,47 @@
 </body>
 
 <body>
-	<hr/>
+	<hr />
 	{{ $asso := .Params.title}}
-	
+
 	<div class="container">
 		<h2 class="text-center">Events related to</h2>
 
 		{{ range where .Site.RegularPages "Section" "events" }}
-		{{ if eq .Params.association $asso}}
+		{{ if and (eq .Params.association $asso) (eq .Params.archived false)}}
 		<div class="row justify-content-center">
 			<a href="{{ .Permalink}}">{{.Params.title}}</a>
 		</div>
 		{{end}}
 		{{end}}
+
+		<div class="row justify-content-center">
+			<button type="button" onclick="show()" class="btn btn-primary">Show archived events</button>
+		</div>
+
+		{{ range where .Site.RegularPages "Section" "events" }}
+		{{ if and (eq .Params.association $asso) (eq .Params.archived true)}}
+		<div id="archivedEvents" style="display:none" class="row justify-content-center">
+			<a href="{{ .Permalink}}">{{.Params.title}}</a>
+		</div>
+		{{end}}
+		{{end}}
+
+		<script>
+			function show() {
+				var archivedEvents = document.getElementById("archivedEvents");
+
+				if (document.getElementById("archivedEvents").style.display == "none") {
+					document.getElementById("archivedEvents").style.display = "inline";
+					document.getElementById("archivedEvents").style.textAlign = "center";
+				}
+				else
+				document.getElementById("archivedEvents").style.display = "none"
+
+			}
+
+		</script>
 	</div>
-
-
 </body>
 
 {{ partial "footer.html" . }}

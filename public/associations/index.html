@@ -9,7 +9,14 @@
 	<link rel="stylesheet" href="/css/style.css">
 	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-	
+	<script>
+		$(document).ready(function () {
+
+			$('#sidebarCollapse').on('click', function () {
+				$('#sidebar').toggleClass('active');
+			});
+
+		});</script>
 	<title>My GoHugo</title>
 
 </head>
@@ -36,7 +43,7 @@
                                         Events
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="/events/test">Display all</a>
+                                        <a class="dropdown-item" href="/all_events">Display all</a>
                                         <a class="dropdown-item" href="/events">Upcoming events</a>
                                         <a class="dropdown-item" href="/archived_events">Archived events</a>
                                 </div>
@@ -52,10 +59,21 @@
         </div>
 </nav>
 
+
 <h2 class="text-center">Associations</h2>
 <div class="container">
     <div class="row d-flex justify-content-center">
         <ul class="list-inline">
+            
+            <li class="list-inline-item col-md-3">
+                <a href="http://example.org/associations/nouvelle_asso/"><img class="img-thumbnail img-fluid" src="" /></a>
+                <div class="col-xs-12 col-sm-9">
+                    <span class="name"></span><br />
+                    <span class="name"></span><br />
+                    <span class="visible-xs"> <span class="text-muted"></span><br /></span>
+                </div>
+                <div class="clearfix"></div>
+            </li>
             
             <li class="list-inline-item col-md-3">
                 <a href="http://example.org/associations/asso1/"><img class="img-thumbnail img-fluid" src="https://www.parlons-en-ensemble.com/wp-content/uploads/2016/03/associations.gif" /></a>
@@ -84,7 +102,7 @@
 <footer>
     <hr />
     <div class="col-md-1"></div>
-    <div class="col-md-7 row d-flex justify-content-center">Phone number : (+33)6 06 06 06 06</div>
+    <div class="col-md-7 row d-flex justify-content-center">Phone number : <a href="tel:(+33)606060606">(+33)6 06 06 06 06</a></div>
     <div class="row d-flex justify-content-center">
         <div class="col-md-2"></div>
         <div class="col-md-4" style="width: 350px;"><iframe width="350" height="350"

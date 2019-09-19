@@ -1,6 +1,5 @@
 body {
-    height : 1000px;
-    margin: 2%;
+    background-color: rgba(255, 255, 255, 0.74);
 }
 
 .event_info {
@@ -16,4 +15,42 @@ body {
 .text-center {
     padding-top: 3%;
     padding-bottom: 3%;
+}
+
+.presentation {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.navbar-black {
+    background-color: #232323!important;
+    font-family: 'Josefin Sans', sans-serif;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+
+.amazingHr {
+    background:url("https://i.stack.imgur.com/SDVw8.png") no-repeat top center;
+    height:70px;
+    border:none !important;
+}
+
+.nav-link {
+    color: white!important;
+}
+.dropdown-item {
+    background-color: #232323!important;
+    color:white;
+}
+
+.dropdown-item:hover {
+    color:#d83c00;
+}
+
+.active:hover {
+    background-color: #d83c00!important;
+}
+
+h2, h3 {
+    font-family: 'Lobster', cursive;
 }

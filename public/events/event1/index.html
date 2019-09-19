@@ -9,7 +9,14 @@
 	<link rel="stylesheet" href="/css/style.css">
 	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-	
+	<script>
+		$(document).ready(function () {
+
+			$('#sidebarCollapse').on('click', function () {
+				$('#sidebar').toggleClass('active');
+			});
+
+		});</script>
 	<title>My GoHugo</title>
 
 </head>
@@ -36,7 +43,7 @@
                                         Events
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="/events/test">Display all</a>
+                                        <a class="dropdown-item" href="/all_events">Display all</a>
                                         <a class="dropdown-item" href="/events">Upcoming events</a>
                                         <a class="dropdown-item" href="/archived_events">Archived events</a>
                                 </div>
@@ -51,6 +58,7 @@
                 </form>
         </div>
 </nav>
+
 
 
 <body>
@@ -79,6 +87,8 @@
 
 
 
+
+
 <div class="row justify-content-center">
 	<a href="http://example.org/associations/asso1/">Asso1</a>
 </div>
@@ -92,7 +102,7 @@
 <footer>
     <hr />
     <div class="col-md-1"></div>
-    <div class="col-md-7 row d-flex justify-content-center">Phone number : (+33)6 06 06 06 06</div>
+    <div class="col-md-7 row d-flex justify-content-center">Phone number : <a href="tel:(+33)606060606">(+33)6 06 06 06 06</a></div>
     <div class="row d-flex justify-content-center">
         <div class="col-md-2"></div>
         <div class="col-md-4" style="width: 350px;"><iframe width="350" height="350"

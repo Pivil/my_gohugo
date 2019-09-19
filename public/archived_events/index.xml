@@ -11,11 +11,11 @@
     
     
     <item>
-      <title>Archived 1</title>
-      <link>http://example.org/archived_events/archived_event1/</link>
+      <title></title>
+      <link>http://example.org/archived_events/empty/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/archived_events/archived_event1/</guid>
+      <guid>http://example.org/archived_events/empty/</guid>
       <description></description>
     </item>
     

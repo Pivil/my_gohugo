@@ -11,6 +11,15 @@
     
     
     <item>
+      <title></title>
+      <link>http://example.org/associations/nouvelle_asso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/associations/nouvelle_asso/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Asso1</title>
       <link>http://example.org/associations/asso1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
