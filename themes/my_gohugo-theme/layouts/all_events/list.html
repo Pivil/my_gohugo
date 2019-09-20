@@ -2,33 +2,13 @@
 {{ partial "header.html" . }}
 
 <body>
-	<h2 class="text-center">All Events</h3>
-		
-		{{ range ((where .Site.RegularPages "Section" "events").ByParam "when").Reverse }}
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-9">
-					{{ if eq .Draft true}}
-					<p> {{ .Title }}</p>
-					
-					{{ else }}
-					<a href="{{ .Permalink }}">{{ .Title }}</a>
-					{{ end }}
+	<h2 class="text-center">All Events</h2>
 
-					<p>Label : {{ .Params.label }}</p>
-					<p>When : {{ .Params.when }}</p>
-					{{$dateEvent := .Params.Date.Format "2006-01-02"}}
-					{{$ajd := now.Format "2006-01-02"}}
-					<p>{{lt $dateEvent $ajd}}</p>
-					{{$ajd}}
-				</div>
-				<div class="col-lg-3">
-					<img class="img-thumbnail" src="{{ .Params.photos }}" />
-				</div>
-			</div>
-			<hr />
-		</div>
-		{{ end }}
+		<ul class="list-inline" style="padding-left: 20%">
+			{{ range ((where .Site.RegularPages "Section" "events").ByParam "when").Reverse }}
+			{{ partial "event.html" . }}
+			{{ end }}
+		</ul>
 
 </body>
 

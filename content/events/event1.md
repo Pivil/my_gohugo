@@ -1,15 +1,13 @@
 ---
-title: "Concert OLALA"
-address: "34 rue machin"
+title: "Un autre concert"
+address: ""
 postalCode: "75000"
 city: "Paris"
-label: "a"
-when: 2019-09-20
+label: ""
+when: "2019-09-10"
 description: ""
-photos: "https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/8/2018/01/15155312/iStock-667709450.jpg"
+photos: "https://img3.parisbouge.com/OCUSRZSQ_1b92pv-VFis2a0kZa_hTqYYLmo1V8UMbco/rs:fill:750:375:1/g:ce/YjA1M2RiZjYtNTMzOS00ZThiLTkzMjctYzliODhmMDQwMjE5LmpwZw.jpg"
 draft: false
 important: true
-association: "Asso1"
-test: "3"
-archived: true
+association: ""
 ---

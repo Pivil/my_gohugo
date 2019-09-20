@@ -4,11 +4,10 @@ address: ""
 postalCode: "75000"
 city: "Paris"
 label: ""
-when: {{.Date}}
+when: "{{ now.Format "2006-01-02" }}"
 description: ""
 photos:
 draft: true
 important: false
 association: ""
-archived: false
 ---

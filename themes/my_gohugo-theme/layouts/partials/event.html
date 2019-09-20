@@ -1,0 +1,17 @@
+<li class="list-inline-item col-md-3 smallEvent">
+    <b> {{ .Title }}</b>
+    
+    <p>Label : {{ .Params.label }}</p>
+    <p>When : {{ .Params.when }}</p>
+
+    {{ if lt .Params.when (now.Format "2006-01-02") }}
+    <span class="badge badge-danger">Archived</span>
+    {{ else }}
+    <span class="badge badge-primary">Upcoming</span>
+    {{ end }}
+    {{ if eq .Params.draft false }}
+    <a href="{{ .Permalink }}"><img class="img-thumbnail" src="{{ .Params.photos }}" /></a>
+    {{ else }}
+    <img class="img-thumbnail" src="{{ .Params.photos }}" />
+    {{ end }}
+</li>

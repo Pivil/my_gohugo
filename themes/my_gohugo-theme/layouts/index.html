@@ -13,7 +13,7 @@
 						</div>
 						{{ $i := 0}}
 						{{ range where .Site.RegularPages "Section" "events" }}
-						{{ if and (eq .Params.important true) (eq .Params.archived false) }}
+						{{ if eq .Params.important true }}
 						{{ if lt $i 10 }}
 						<div class="carousel-item">
 							<a href="{{ .Permalink }}">

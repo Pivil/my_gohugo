@@ -2,31 +2,17 @@
 {{ partial "header.html" . }}
 
 <body>
-	<h2 class="text-center">Archived Events</h2>
+	<h2 class="text-center">All Events</h2>
 
-	{{ range ((where .Site.RegularPages "Section" "events").ByParam "when").Reverse }}
-	{{ if eq .Params.archived true}}
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-9">
-				{{ if eq .Draft true}}
-				<p> {{ .Title }}</p>
-				{{ else }}
-				<a href="{{ .Permalink }}">{{ .Title }}</a>
-				{{ end }}
-
-				<p>Label : {{ .Params.label }}</p>
-				<p>When : {{ .Params.when }}</p>
-			</div>
-			<div class="col-lg-3">
-				<img class="img-thumbnail" src="{{ .Params.photos }}" />
-			</div>
-		</div>
-		<hr />
-	</div>
-	{{ end }}
-	{{ end }}
+		<ul class="list-inline" style="padding-left: 20%">
+			{{ range ((where .Site.RegularPages "Section" "events").ByParam "when").Reverse }}
+			{{ if eq (lt .Params.when (now.Format "2006-01-02")) true }} 
+				{{ partial "event.html" . }}
+			{{ end }}
+			{{ end }}
+		</ul>
 
 </body>
 
 {{ partial "footer.html" . }}
+

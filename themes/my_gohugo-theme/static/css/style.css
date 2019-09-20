@@ -121,3 +121,12 @@ h2, h3 {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
+
+  .singleImg{
+    width:640px;
+    height:360px
+  }
+
+  .smallEvent {
+    padding-bottom: 2%;
+  }

@@ -1,16 +1,13 @@
 ---
-title: "Pêche ogros"
+title: "Event2"
 address: ""
 postalCode: "75000"
 city: "Paris"
-label: "b"
-when: 2019-09-20
+label: ""
+when: "2019-09-20"
 description: ""
-photos: "http://www.federation-peche-yonne.fr/galerie/0d0f10b665a4.jpg"
+photos: "https://img3.parisbouge.com/_xuNNwbS2bvqNaUeACDJAucAlj3pld4SUMMfw5od8Ew/rs:fill:750:375:1/g:ce/ZGM4MDEyMDUtYmQwYS00MjUwLWIxODAtNGFmOTlmMjA1NGMzLmpwZw.jpg"
 draft: false
 important: true
-association: "Asso2"
-test: "0"
-archived: false
-
+association: ""
 ---
