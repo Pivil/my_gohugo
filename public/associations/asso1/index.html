@@ -7,26 +7,23 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
 	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-	<script>
-		$(document).ready(function () {
+	<script src="https://unpkg.com/lunr/lunr.js"></script>
 
-			$('#sidebarCollapse').on('click', function () {
-				$('#sidebar').toggleClass('active');
-			});
-
-		});</script>
 	<title>My GoHugo</title>
 
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-black">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse test" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                                 <a class="nav-link" href="/">Home </a>
@@ -52,20 +49,54 @@
                                 <a class="nav-link" href="/calendar">Calendar</a>
                         </li>
                 </ul>
+                
+
                 <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <input v-model="txt" @keyup="search()" @blur="close()" class="form-control mr-sm-2"
+                                type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+
         </div>
 </nav>
 
+<br />
+<br />
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+    
+    
+    
+    <a href="http://example.org/associations/asso1/">Asso1</a>
+    
+    
+    
+    
+</div>
+
+<div id="aside">
+    <button class="openbtn" onclick="go()"> ← Highlited Associations</button>
+</div>
+
+<script>
+    function go() {
+        if (document.getElementById("mySidebar").style.width == "200px") {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("aside").style.marginLeft = "0";
+        } else {
+            document.getElementById("mySidebar").style.width = "200px";
+            document.getElementById("aside").style.marginLeft = "200px";
+        }
+    }
+</script>
 <body>
 
 	<h2 class="text-center">Asso1</h2>
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-lg-3">
-				<img class="img-thumbnail" src="https://www.parlons-en-ensemble.com/wp-content/uploads/2016/03/associations.gif">
+			<div class="col-lg-3 ">
+				<img class="img-thumbnail " src="https://www.parlons-en-ensemble.com/wp-content/uploads/2016/03/associations.gif">
 			</div>
 		</div>
 
@@ -80,33 +111,63 @@
 		<div class="row justify-content-center">
 			<p>Desc1</p>
 		</div>
+		
 
 </div>
 </body>
 
 <body>
-	<hr/>
+	<hr />
 	
-	
+
 	<div class="container">
 		<h2 class="text-center">Events related to</h2>
 
 		
 		
+		
+		
+		
+		
+		
+		
+		
+
 		<div class="row justify-content-center">
-			<a href="http://example.org/events/event1/">Concert OLALA</a>
+			<button type="button" onclick="show()" class="btn btn-primary">Show archived events</button>
 		</div>
+
 		
 		
 		
 		
+		
+		
+		
+		
+		
+
+		<script>
+			function show() {
+				var archivedEvents = document.getElementById("archivedEvents");
+
+				if (document.getElementById("archivedEvents").style.display == "none") {
+					document.getElementById("archivedEvents").style.display = "inline";
+					document.getElementById("archivedEvents").style.textAlign = "center";
+				}
+				else
+				document.getElementById("archivedEvents").style.display = "none"
+
+			}
+
+		</script>
 	</div>
-
-
 </body>
 
 <footer>
-    <hr />
+    <hr class="amazingHr"/>
+    <h2 class="text-center">Contact us</h3>
+
     <div class="col-md-1"></div>
     <div class="col-md-7 row d-flex justify-content-center">Phone number : <a href="tel:(+33)606060606">(+33)6 06 06 06 06</a></div>
     <div class="row d-flex justify-content-center">

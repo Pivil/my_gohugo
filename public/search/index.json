@@ -1,84 +1,28 @@
-
-{ "results": [
-
-
-
+[
+    
+    
     {
-    "url": "http://example.org/conseil-municipal/conseil1/",
-    "title": "",
-    "content": ""
-    },
-
-    {
-    "url": "http://example.org/conseil-municipal/prunille-copy-2/",
-    "title": "",
-    "content": "miaou "
-    },
-
-    {
-    "url": "http://example.org/conseil-municipal/prunille-copy-3/",
-    "title": "",
-    "content": "miaou "
-    },
-
-    {
-    "url": "http://example.org/conseil-municipal/prunille-copy-4/",
-    "title": "",
-    "content": "miaou "
-    },
-
-    {
-    "url": "http://example.org/conseil-municipal/prunille-copy/",
-    "title": "",
-    "content": "miaou "
-    },
-
-    {
-    "url": "http://example.org/conseil-municipal/prunille/",
-    "title": "",
-    "content": "miaou "
-    },
-
-    {
-    "url": "http://example.org/aeaetps/erzer/",
-    "title": "",
-    "content": ""
-    },
-
-    {
-    "url": "http://example.org/presentation/presentation1/",
-    "title": "",
-    "content": "la mairie de paris, sise l&rsquo;hôtel ville capitale, fait référence l&rsquo;administration collectivité territoriale statut particulier dont dépend le territoire paris 2,3. elle est composée d&rsquo;environ 53 000 agents répartis au sein nombreuses directions coordonnées par un secrétariat général, sous l&rsquo;autorité du maire et ses adjoints. s&rsquo;agit d&rsquo;une des entités administratives les plus importantes en france, aussi bien nombre d&rsquo;agents qu&rsquo;en budget. stature s&rsquo;explique essentiellement d&rsquo;habitants (2,2 millions d&rsquo;habitants), qui fois commune deuxième département peuplés france. plus, cumule compétences forte 20 arrondissements celles d&rsquo;un département. "
-    },
-
-    {
-    "url": "http://example.org/archived_events/archived_event1/",
-    "title": "Archived 1",
-    "content": ""
-    },
-
-    {
-    "url": "http://example.org/associations/asso1/",
-    "title": "Asso1",
-    "content": ""
-    },
-
-    {
-    "url": "http://example.org/associations/asso2/",
-    "title": "Asso2",
-    "content": ""
-    },
-
-    {
-    "url": "http://example.org/events/event1/",
-    "title": "Concert OLALA",
-    "content": ""
-    },
-
-    {
-    "url": "http://example.org/events/event2/",
-    "title": "Pêche ogros",
-    "content": ""
+        "title": "Concert de rap",
     }
-
-]}
+    
+    , 
+    {
+        "title": "Event2",
+    }
+    
+    , 
+    {
+        "title": "Events",
+    }
+    
+    , 
+    {
+        "title": "Un autre concert",
+    }
+    
+    , 
+    {
+        "title": "Une journée à Epitech",
+    }
+    
+]

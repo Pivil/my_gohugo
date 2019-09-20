@@ -7,26 +7,23 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
 	<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-	<script>
-		$(document).ready(function () {
+	<script src="https://unpkg.com/lunr/lunr.js"></script>
 
-			$('#sidebarCollapse').on('click', function () {
-				$('#sidebar').toggleClass('active');
-			});
-
-		});</script>
 	<title>My GoHugo</title>
 
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-black">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse test" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                                 <a class="nav-link" href="/">Home </a>
@@ -52,43 +49,112 @@
                                 <a class="nav-link" href="/calendar">Calendar</a>
                         </li>
                 </ul>
+                
+
                 <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <input v-model="txt" @keyup="search()" @blur="close()" class="form-control mr-sm-2"
+                                type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+
         </div>
 </nav>
+
+<br />
+<br />
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+    
+    
+    
+    <a href="http://example.org/associations/asso1/">Asso1</a>
+    
+    
+    
+    
+</div>
+
+<div id="aside">
+    <button class="openbtn" onclick="go()"> ← Highlited Associations</button>
+</div>
+
+<script>
+    function go() {
+        if (document.getElementById("mySidebar").style.width == "200px") {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("aside").style.marginLeft = "0";
+        } else {
+            document.getElementById("mySidebar").style.width = "200px";
+            document.getElementById("aside").style.marginLeft = "200px";
+        }
+    }
+</script>
 
 <body>
 	<h2 class="text-center">Upcoming Events</h3>
 
-	
-	
-	
-	
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-9">
-				
-				<a href="http://example.org/events/event2/">Pêche ogros</a>
-				
+		<ul class="list-inline" style="padding-left: 20%">
 
-				<p>Label : b</p>
-				<p>When : 15/09/2019</p>
-			</div>
-			<div class="col-lg-3">
-				<img class="img-thumbnail" src="http://www.federation-peche-yonne.fr/galerie/0d0f10b665a4.jpg" />
-			</div>
-		</div>
-		<hr />
-	</div>
-	
-	
+			
+			
+			<li class="list-inline-item col-md-3 smallEvent">
+    <b> Concert de rap</b>
+    
+    <p>Label : SILILIK PAK PAK</p>
+    <p>When : 2020-01-01</p>
+
+    
+    <span class="badge badge-primary">Upcoming</span>
+    
+    
+    <a href="http://example.org/events/event3/"><img class="img-thumbnail" src="https://img3.parisbouge.com/SfrXeZU4d7L2vCoCDsN3nC4tCp85WMk_FF84TS3uj0I/rs:fill:750:375:1/g:ce/NDU1YzU1ZDEtYTZmNi00YzAxLTliOWMtNGNiYzBjYmE0OTlkLmpwZw.jpg" /></a>
+    
+</li>
+			
+			
+			
+			<li class="list-inline-item col-md-3 smallEvent">
+    <b> Une journée à Epitech</b>
+    
+    <p>Label : Un label</p>
+    <p>When : 2019-09-20</p>
+
+    
+    <span class="badge badge-primary">Upcoming</span>
+    
+    
+    <a href="http://example.org/events/event4/"><img class="img-thumbnail" src="https://img3.parisbouge.com/Kz2zlDw8rByCb33g5N3MgqFJZCHPHH2ZbHZ1ZfWAcu4/rs:fill:750:375:1/g:ce/MWYwY2ZmNDItOWZmYy00YmFkLWJjOTctZWI2NGFjZDc2NDYwLmpwZw.jpg" /></a>
+    
+</li>
+			
+			
+			
+			<li class="list-inline-item col-md-3 smallEvent">
+    <b> Event2</b>
+    
+    <p>Label : </p>
+    <p>When : 2019-09-20</p>
+
+    
+    <span class="badge badge-primary">Upcoming</span>
+    
+    
+    <a href="http://example.org/events/event2/"><img class="img-thumbnail" src="https://img3.parisbouge.com/_xuNNwbS2bvqNaUeACDJAucAlj3pld4SUMMfw5od8Ew/rs:fill:750:375:1/g:ce/ZGM4MDEyMDUtYmQwYS00MjUwLWIxODAtNGFmOTlmMjA1NGMzLmpwZw.jpg" /></a>
+    
+</li>
+			
+			
+			
+			
+		</ul>
 
 </body>
 
 <footer>
-    <hr />
+    <hr class="amazingHr"/>
+    <h2 class="text-center">Contact us</h3>
+
     <div class="col-md-1"></div>
     <div class="col-md-7 row d-flex justify-content-center">Phone number : <a href="tel:(+33)606060606">(+33)6 06 06 06 06</a></div>
     <div class="row d-flex justify-content-center">

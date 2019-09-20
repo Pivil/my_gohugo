@@ -1,75 +1,171 @@
 <footer>
-    <hr class="amazingHr"/>
+    <hr class="amazingHr" />
     <h2 class="text-center">Contact us</h3>
 
-    <div class="col-md-1"></div>
-    <div class="col-md-7 row d-flex justify-content-center">Phone number : <a href="tel:(+33)606060606">(+33)6 06 06 06 06</a></div>
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-2"></div>
-        <div class="col-md-4" style="width: 350px;"><iframe width="350" height="350"
-                src="https://maps.google.com/maps?width=350&amp;height=350&amp;hl=en&amp;q=Place%20de%20l%5C'H%C3%B4tel-de-Ville%2075196%20Paris%20Cedex%2004+(Town%20Hall)&amp;ie=UTF8&amp;t=&amp;z=13&amp;iwloc=B&amp;output=embed"
-                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <div class="col-md-1"></div>
+        <div class="col-md-7 row d-flex justify-content-center">Phone number : <a href="tel:(+33)606060606">(+33)6 06 06
+                06 06</a></div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-2"></div>
+            <div class="col-md-4" style="width: 350px;"><iframe width="350" height="350"
+                    src="https://maps.google.com/maps?width=350&amp;height=350&amp;hl=en&amp;q=Place%20de%20l%5C'H%C3%B4tel-de-Ville%2075196%20Paris%20Cedex%2004+(Town%20Hall)&amp;ie=UTF8&amp;t=&amp;z=13&amp;iwloc=B&amp;output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 
-            <style>
-                #gmap_canvas img {
-                    max-width: none !important;
-                    background: none !important
-                }
-            </style>
+                <style>
+                    #gmap_canvas img {
+                        max-width: none !important;
+                        background: none !important
+                    }
+                </style>
+            </div>
+            <div class="col-md-6">
+                <script type="text/javascript">var submitted = false;</script>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                    onload="if(submitted) {window.location=window.location.href;}"></iframe>
+                <form
+                    action="https://docs.google.com/forms/d/e/1FAIpQLSeeSCgB4JRQakFqUO8TUJRUsWfHlNvW2aKu_FAet2-325s5KQ/formResponse"
+                    method="post" onsubmit="submitted=true;" target="hidden_iframe" class="form-horizontal">
+                    <fieldset>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="">Your email</label>
+                            <div class="col-md-6">
+                                <input id="user_email" name="entry.1781500597" type="text" placeholder=""
+                                    class="form-control input-md">
+
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="">Subject</label>
+                            <div class="col-md-6">
+                                <input id="user_subject" name="entry.1640447617" type="text" placeholder=""
+                                    class="form-control input-md" required="">
+
+                            </div>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="">Your message</label>
+                            <div class="col-md-6">
+                                <textarea class="form-control" id="entry.2040870261" name="entry.2040870261"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for=""></label>
+                            <div class="col-md-4">
+                                <button id="button_send" name="button_send" class="btn btn-primary">Send</button>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+            </div>
         </div>
-        <div class="col-md-6">
-            <script type="text/javascript">var submitted = false;</script>
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-                onload="if(submitted) {window.location=window.location.href;}"></iframe>
-            <form
-                action="https://docs.google.com/forms/d/e/1FAIpQLSeeSCgB4JRQakFqUO8TUJRUsWfHlNvW2aKu_FAet2-325s5KQ/formResponse"
-                method="post" onsubmit="submitted=true;" target="hidden_iframe" class="form-horizontal">
-                <fieldset>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="">Your email</label>
-                        <div class="col-md-6">
-                            <input id="user_email" name="entry.1781500597" type="text" placeholder=""
-                                class="form-control input-md">
-
-                        </div>
-                    </div>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="">Subject</label>
-                        <div class="col-md-6">
-                            <input id="user_subject" name="entry.1640447617" type="text" placeholder=""
-                                class="form-control input-md" required="">
-
-                        </div>
-                    </div>
-
-                    <!-- Textarea -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="">Your message</label>
-                        <div class="col-md-6">
-                            <textarea class="form-control" id="entry.2040870261" name="entry.2040870261"></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Button -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for=""></label>
-                        <div class="col-md-4">
-                            <button id="button_send" name="button_send" class="btn btn-primary">Send</button>
-                        </div>
-                    </div>
-
-                </fieldset>
-            </form>
-
-        </div>
-    </div>
 
 
 </footer>
 
+<script>
+    var idx, searchInput, searchResults = null
+    var documents = []
+    window.onload = function () {
+
+        // get dom elements
+        searchInput = document.getElementById('search-input')
+        searchResults = document.getElementById('search-results')
+
+        // request and index documents
+        fetch('/search/index.json', {
+            method: 'get'
+        }).then(
+            res => res.json()
+        ).then(
+            res => {
+
+                // index document
+                idx = lunr(function () {
+                    this.ref('url')
+                    this.field('title')
+                    this.field('content')
+
+                    res.forEach(function (doc) {
+                        this.add(doc)
+                        documents[doc.url] = {
+                            'title': doc.title,
+                            'content': doc.content,
+                        }
+                    }, this)
+                })
+
+                // data is loaded, next register handler
+                registerSearchHandler()
+            }
+        ).catch(
+            err => {
+                searchResults.innerHTML = `<p>${err}</p>`
+            }
+        )
+    }
+    function registerSearchHandler() {
+
+        // register on input event
+        searchInput.oninput = function (event) {
+
+            // remove search results if the user empties the search input field
+            if (searchInput.value == '') {
+
+                searchResults.innerHTML = ''
+            } else {
+
+                // get input value
+                var query = event.target.value
+
+                // run fuzzy search
+                var results = idx.search(query + '*')
+
+                // render results
+                renderSearchResults(results)
+            }
+        }
+
+        // set focus on search input and remove loading placeholder
+        searchInput.focus()
+        searchInput.placeholder = ''
+    }
+    function renderSearchResults(results) {
+
+        if (results.length > 0) {
+
+            // show max 10 results
+            if (results.length > 9) {
+                results = results.slice(0, 10)
+            }
+
+            // reset search results
+            searchResults.innerHTML = ''
+
+            // append results
+            results.forEach(result => {
+
+                // create result item
+                var article = document.createElement('article')
+                article.innerHTML = `
+        <a href="${result.ref}">${documents[result.ref].title}</a>
+        `
+                searchResults.appendChild(article)
+            })
+
+            // if results are empty
+        } else {
+            searchResults.innerHTML = '<p>No results found.</p>'
+        }
+    }</script>
 
 </html>

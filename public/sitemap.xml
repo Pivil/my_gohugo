@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2018-09-04T15:32:54+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/search/index.json</loc>
+    <lastmod>2018-09-04T15:32:54+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://example.org/all_events/empty/</loc>
   </url>
   
@@ -71,7 +81,7 @@
   </url>
   
   <url>
-    <loc>http://example.org/events/event1/</loc>
+    <loc>http://example.org/events/event3/</loc>
   </url>
   
   <url>
@@ -83,11 +93,11 @@
   </url>
   
   <url>
-    <loc>http://example.org/events/</loc>
+    <loc>http://example.org/events/event2/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://example.org/events/</loc>
   </url>
   
   <url>
@@ -95,11 +105,15 @@
   </url>
   
   <url>
-    <loc>http://example.org/events/event2/</loc>
+    <loc>http://example.org/tags/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://example.org/events/event1/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/events/event4/</loc>
   </url>
   
 </urlset>
